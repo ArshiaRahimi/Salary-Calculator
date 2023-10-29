@@ -1,0 +1,25 @@
+{
+  "projectApp": {
+    "tblSensorReadings": {
+      "home": {
+        "title": "Tbl Sensor Readings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Sensor Readings",
+        "createOrEditLabel": "Create or edit a Tbl Sensor Readings",
+        "notFound": "No Tbl Sensor Readings found"
+      },
+      "created": "A new Tbl Sensor Readings is created with identifier {{ param }}",
+      "updated": "A Tbl Sensor Readings is updated with identifier {{ param }}",
+      "deleted": "A Tbl Sensor Readings is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Sensor Readings {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Sensor Readings"
+      },
+      "id": "ID",
+      "employeeId": "Employee Id",
+      "readingTime": "Reading Time"
+    }
+  }
+}

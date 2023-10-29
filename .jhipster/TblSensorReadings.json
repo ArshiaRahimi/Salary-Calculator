@@ -1,0 +1,18 @@
+{
+  "changelogDate": "20231028142356",
+  "fields": [
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "readingTime",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "name": "TblSensorReadings",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
