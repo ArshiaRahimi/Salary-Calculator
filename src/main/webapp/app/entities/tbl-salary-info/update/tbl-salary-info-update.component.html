@@ -1,0 +1,102 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-tbl-salary-info-heading"
+        data-cy="TblSalaryInfoCreateUpdateHeading"
+        jhiTranslate="projectApp.tblSalaryInfo.home.createOrEditLabel"
+      >
+        Create or edit a Tbl Salary Info
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblSalaryInfo.employeeId" for="field_employeeId">Employee Id</label>
+          <input
+            type="number"
+            class="form-control"
+            name="employeeId"
+            id="field_employeeId"
+            data-cy="employeeId"
+            formControlName="employeeId"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblSalaryInfo.baseSalary" for="field_baseSalary">Base Salary</label>
+          <input
+            type="number"
+            class="form-control"
+            name="baseSalary"
+            id="field_baseSalary"
+            data-cy="baseSalary"
+            formControlName="baseSalary"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblSalaryInfo.housingRights" for="field_housingRights">Housing Rights</label>
+          <input
+            type="number"
+            class="form-control"
+            name="housingRights"
+            id="field_housingRights"
+            data-cy="housingRights"
+            formControlName="housingRights"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblSalaryInfo.internetRights" for="field_internetRights"
+            >Internet Rights</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="internetRights"
+            id="field_internetRights"
+            data-cy="internetRights"
+            formControlName="internetRights"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblSalaryInfo.groceriesRights" for="field_groceriesRights"
+            >Groceries Rights</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="groceriesRights"
+            id="field_groceriesRights"
+            data-cy="groceriesRights"
+            formControlName="groceriesRights"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

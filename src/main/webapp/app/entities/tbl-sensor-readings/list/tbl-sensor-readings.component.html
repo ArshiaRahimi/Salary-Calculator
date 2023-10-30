@@ -28,24 +28,6 @@
     <span jhiTranslate="projectApp.tblSensorReadings.home.notFound">No Tbl Sensor Readings found</span>
   </div>
 
-  <form name="searchForm" class="form-inline">
-    <div class="input-group w-100 mb-3">
-      <input
-        class="form-control"
-        [(ngModel)]="currentSearch"
-        id="currentSearch"
-        name="currentSearch"
-        placeholder="{{ 'tspPortalApp.billHeader.search' | translate }}"
-      />
-      <button
-        class="input-group-append btn btn-sm btn-info btn-rounded d-flex justify-content-center align-items-center"
-        (click)="search(currentSearch)"
-      >
-        <fa-icon [icon]="'search'"></fa-icon>
-      </button>
-    </div>
-  </form>
-
   <div class="table-responsive table-entities" id="entities" *ngIf="tblSensorReadings && tblSensorReadings.length > 0">
     <table class="table table-striped" aria-describedby="page-heading">
       <thead>

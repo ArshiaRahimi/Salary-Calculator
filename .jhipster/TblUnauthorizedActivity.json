@@ -1,0 +1,34 @@
+{
+  "changelogDate": "20231030145502",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "rfidId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "readingTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "attempt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "fingerprint",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "TblUnauthorizedActivity",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

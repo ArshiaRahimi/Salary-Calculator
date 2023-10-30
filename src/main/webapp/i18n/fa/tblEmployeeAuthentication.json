@@ -1,0 +1,27 @@
+{
+  "projectApp": {
+    "tblEmployeeAuthentication": {
+      "home": {
+        "title": "Tbl Employee Authentications",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Employee Authentication",
+        "createOrEditLabel": "Create or edit a Tbl Employee Authentication",
+        "notFound": "No Tbl Employee Authentications found"
+      },
+      "created": "A new Tbl Employee Authentication is created with identifier {{ param }}",
+      "updated": "A Tbl Employee Authentication is updated with identifier {{ param }}",
+      "deleted": "A Tbl Employee Authentication is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Employee Authentication {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Employee Authentication"
+      },
+      "id": "ID",
+      "employeeId": "Employee Id",
+      "rfidId": "Rfid Id",
+      "fingerprint": "Fingerprint",
+      "isActive": "Is Active"
+    }
+  }
+}

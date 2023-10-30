@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="tblEmployeeAuthentication">
+      <h2 data-cy="tblEmployeeAuthenticationDetailsHeading">
+        <span jhiTranslate="projectApp.tblEmployeeAuthentication.detail.title">Tbl Employee Authentication</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ tblEmployeeAuthentication.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeAuthentication.employeeId">Employee Id</span></dt>
+        <dd>
+          <span>{{ tblEmployeeAuthentication.employeeId }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeAuthentication.rfidId">Rfid Id</span></dt>
+        <dd>
+          <span>{{ tblEmployeeAuthentication.rfidId }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeAuthentication.fingerprint">Fingerprint</span></dt>
+        <dd>
+          <span>{{ tblEmployeeAuthentication.fingerprint }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeAuthentication.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ tblEmployeeAuthentication.isActive }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/tbl-employee-authentication', tblEmployeeAuthentication.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

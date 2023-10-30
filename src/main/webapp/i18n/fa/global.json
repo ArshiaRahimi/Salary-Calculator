@@ -8,6 +8,13 @@
       "entities": {
         "main": "ماهیت ها",
         "tblSensorReadings": "Tbl Sensor Readings",
+        "tblWorkingHours": "Tbl Working Hours",
+        "tblOffDay": "Tbl Off Day",
+        "tblUnauthorizedActivity": "Tbl Unauthorized Activity",
+        "tblEmployeeInformation": "Tbl Employee Information",
+        "tblSalaryInfo": "Tbl Salary Info",
+        "tblEmployeeAuthentication": "Tbl Employee Authentication",
+        "tblEmployeeSalary": "Tbl Employee Salary",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

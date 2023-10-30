@@ -1,0 +1,28 @@
+{
+  "projectApp": {
+    "tblSalaryInfo": {
+      "home": {
+        "title": "Tbl Salary Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Salary Info",
+        "createOrEditLabel": "Create or edit a Tbl Salary Info",
+        "notFound": "No Tbl Salary Infos found"
+      },
+      "created": "A new Tbl Salary Info is created with identifier {{ param }}",
+      "updated": "A Tbl Salary Info is updated with identifier {{ param }}",
+      "deleted": "A Tbl Salary Info is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Salary Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Salary Info"
+      },
+      "id": "ID",
+      "employeeId": "Employee Id",
+      "baseSalary": "Base Salary",
+      "housingRights": "Housing Rights",
+      "internetRights": "Internet Rights",
+      "groceriesRights": "Groceries Rights"
+    }
+  }
+}

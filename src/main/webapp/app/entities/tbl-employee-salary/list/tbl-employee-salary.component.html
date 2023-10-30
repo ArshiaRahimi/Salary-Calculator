@@ -1,0 +1,143 @@
+<div>
+  <h2 id="page-heading" data-cy="TblEmployeeSalaryHeading">
+    <span jhiTranslate="projectApp.tblEmployeeSalary.home.title">Tbl Employee Salaries</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="projectApp.tblEmployeeSalary.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-tbl-employee-salary"
+        [routerLink]="['/tbl-employee-salary/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="projectApp.tblEmployeeSalary.home.createLabel"> Create a new Tbl Employee Salary </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <jhi-filter [filters]="filters"></jhi-filter>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="tblEmployeeSalaries?.length === 0">
+    <span jhiTranslate="projectApp.tblEmployeeSalary.home.notFound">No Tbl Employee Salaries found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="tblEmployeeSalaries && tblEmployeeSalaries.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dateCalculated">
+            <div class="d-flex">
+              <span jhiTranslate="projectApp.tblEmployeeSalary.dateCalculated">Date Calculated</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="employeeId">
+            <div class="d-flex">
+              <span jhiTranslate="projectApp.tblEmployeeSalary.employeeId">Employee Id</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="undertime">
+            <div class="d-flex">
+              <span jhiTranslate="projectApp.tblEmployeeSalary.undertime">Undertime</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="overtime">
+            <div class="d-flex">
+              <span jhiTranslate="projectApp.tblEmployeeSalary.overtime">Overtime</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="overtimeOffday">
+            <div class="d-flex">
+              <span jhiTranslate="projectApp.tblEmployeeSalary.overtimeOffday">Overtime Offday</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="totalSalary">
+            <div class="d-flex">
+              <span jhiTranslate="projectApp.tblEmployeeSalary.totalSalary">Total Salary</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tblEmployeeSalary of tblEmployeeSalaries; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/tbl-employee-salary', tblEmployeeSalary.id, 'view']">{{ tblEmployeeSalary.id }}</a>
+          </td>
+          <td>{{ tblEmployeeSalary.dateCalculated | formatMediumDatetime }}</td>
+          <td>{{ tblEmployeeSalary.employeeId }}</td>
+          <td>{{ tblEmployeeSalary.undertime }}</td>
+          <td>{{ tblEmployeeSalary.overtime }}</td>
+          <td>{{ tblEmployeeSalary.overtimeOffday }}</td>
+          <td>{{ tblEmployeeSalary.totalSalary }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/tbl-employee-salary', tblEmployeeSalary.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/tbl-employee-salary', tblEmployeeSalary.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(tblEmployeeSalary)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="tblEmployeeSalaries && tblEmployeeSalaries.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

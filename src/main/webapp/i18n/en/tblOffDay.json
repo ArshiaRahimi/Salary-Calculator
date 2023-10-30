@@ -1,0 +1,26 @@
+{
+  "projectApp": {
+    "tblOffDay": {
+      "home": {
+        "title": "Tbl Off Days",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Off Day",
+        "createOrEditLabel": "Create or edit a Tbl Off Day",
+        "notFound": "No Tbl Off Days found"
+      },
+      "created": "A new Tbl Off Day is created with identifier {{ param }}",
+      "updated": "A Tbl Off Day is updated with identifier {{ param }}",
+      "deleted": "A Tbl Off Day is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Off Day {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Off Day"
+      },
+      "id": "ID",
+      "day": "Day",
+      "month": "Month",
+      "year": "Year"
+    }
+  }
+}

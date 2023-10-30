@@ -1,0 +1,28 @@
+{
+  "projectApp": {
+    "tblWorkingHours": {
+      "home": {
+        "title": "Tbl Working Hours",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Working Hours",
+        "createOrEditLabel": "Create or edit a Tbl Working Hours",
+        "notFound": "No Tbl Working Hours found"
+      },
+      "created": "A new Tbl Working Hours is created with identifier {{ param }}",
+      "updated": "A Tbl Working Hours is updated with identifier {{ param }}",
+      "deleted": "A Tbl Working Hours is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Working Hours {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Working Hours"
+      },
+      "id": "ID",
+      "day": "Day",
+      "startTimeHour": "Start Time Hour",
+      "startTimeMinute": "Start Time Minute",
+      "endTimeHour": "End Time Hour",
+      "endTimeMinute": "End Time Minute"
+    }
+  }
+}

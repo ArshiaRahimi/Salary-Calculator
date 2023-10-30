@@ -1,0 +1,11 @@
+id;rfid_id;employee_id;reading_time;attempt;fingerprint
+1;system Hollow;89679;2023-10-29T21:21:55;82389;../fake-data/blob/hipster.txt
+2;Credit Adaptive;84266;2023-10-30T02:59:32;87717;../fake-data/blob/hipster.txt
+3;cross-platform Avon;74201;2023-10-30T11:09:54;70396;../fake-data/blob/hipster.txt
+4;Congo;50183;2023-10-29T16:32:52;50419;../fake-data/blob/hipster.txt
+5;Montenegro;37896;2023-10-29T21:17:50;83109;../fake-data/blob/hipster.txt
+6;cross-media Pizza Executive;31305;2023-10-29T15:53:51;80753;../fake-data/blob/hipster.txt
+7;Lakes;94270;2023-10-30T05:25:27;31483;../fake-data/blob/hipster.txt
+8;Ergonomic Rustic Sleek;27719;2023-10-30T11:35:33;77782;../fake-data/blob/hipster.txt
+9;Computer groupware;34220;2023-10-30T04:34:19;7710;../fake-data/blob/hipster.txt
+10;incubate;26954;2023-10-29T17:22:39;78417;../fake-data/blob/hipster.txt

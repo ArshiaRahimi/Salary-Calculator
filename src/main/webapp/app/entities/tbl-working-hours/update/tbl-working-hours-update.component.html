@@ -1,0 +1,97 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-tbl-working-hours-heading"
+        data-cy="TblWorkingHoursCreateUpdateHeading"
+        jhiTranslate="projectApp.tblWorkingHours.home.createOrEditLabel"
+      >
+        Create or edit a Tbl Working Hours
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblWorkingHours.day" for="field_day">Day</label>
+          <input type="text" class="form-control" name="day" id="field_day" data-cy="day" formControlName="day" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblWorkingHours.startTimeHour" for="field_startTimeHour"
+            >Start Time Hour</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="startTimeHour"
+            id="field_startTimeHour"
+            data-cy="startTimeHour"
+            formControlName="startTimeHour"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblWorkingHours.startTimeMinute" for="field_startTimeMinute"
+            >Start Time Minute</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="startTimeMinute"
+            id="field_startTimeMinute"
+            data-cy="startTimeMinute"
+            formControlName="startTimeMinute"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblWorkingHours.endTimeHour" for="field_endTimeHour">End Time Hour</label>
+          <input
+            type="number"
+            class="form-control"
+            name="endTimeHour"
+            id="field_endTimeHour"
+            data-cy="endTimeHour"
+            formControlName="endTimeHour"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="projectApp.tblWorkingHours.endTimeMinute" for="field_endTimeMinute"
+            >End Time Minute</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="endTimeMinute"
+            id="field_endTimeMinute"
+            data-cy="endTimeMinute"
+            formControlName="endTimeMinute"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

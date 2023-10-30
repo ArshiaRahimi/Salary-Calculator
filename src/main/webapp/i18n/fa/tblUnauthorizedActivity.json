@@ -1,0 +1,28 @@
+{
+  "projectApp": {
+    "tblUnauthorizedActivity": {
+      "home": {
+        "title": "Tbl Unauthorized Activities",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Unauthorized Activity",
+        "createOrEditLabel": "Create or edit a Tbl Unauthorized Activity",
+        "notFound": "No Tbl Unauthorized Activities found"
+      },
+      "created": "A new Tbl Unauthorized Activity is created with identifier {{ param }}",
+      "updated": "A Tbl Unauthorized Activity is updated with identifier {{ param }}",
+      "deleted": "A Tbl Unauthorized Activity is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Unauthorized Activity {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Unauthorized Activity"
+      },
+      "id": "ID",
+      "rfidId": "Rfid Id",
+      "employeeId": "Employee Id",
+      "readingTime": "Reading Time",
+      "attempt": "Attempt",
+      "fingerprint": "Fingerprint"
+    }
+  }
+}

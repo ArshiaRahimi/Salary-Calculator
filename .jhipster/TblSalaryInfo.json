@@ -1,0 +1,34 @@
+{
+  "changelogDate": "20231030153053",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Integer",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "baseSalary",
+      "fieldType": "Integer",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "housingRights",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "internetRights",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "groceriesRights",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "TblSalaryInfo",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

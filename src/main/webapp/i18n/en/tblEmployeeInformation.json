@@ -1,0 +1,26 @@
+{
+  "projectApp": {
+    "tblEmployeeInformation": {
+      "home": {
+        "title": "Tbl Employee Informations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Employee Information",
+        "createOrEditLabel": "Create or edit a Tbl Employee Information",
+        "notFound": "No Tbl Employee Informations found"
+      },
+      "created": "A new Tbl Employee Information is created with identifier {{ param }}",
+      "updated": "A Tbl Employee Information is updated with identifier {{ param }}",
+      "deleted": "A Tbl Employee Information is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Employee Information {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Employee Information"
+      },
+      "id": "ID",
+      "name": "Name",
+      "familyName": "Family Name",
+      "phoneNumber": "Phone Number"
+    }
+  }
+}

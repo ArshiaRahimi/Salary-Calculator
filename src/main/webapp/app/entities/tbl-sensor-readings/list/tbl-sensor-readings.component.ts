@@ -16,10 +16,7 @@ import { TblSensorReadingsDeleteDialogComponent } from '../delete/tbl-sensor-rea
   templateUrl: './tbl-sensor-readings.component.html',
 })
 export class TblSensorReadingsComponent implements OnInit {
-  currentSearch: any;
-  querySearch: any;
-
-  tblSensorReadings?: any;
+  tblSensorReadings?: ITblSensorReadings[];
   isLoading = false;
 
   predicate = 'id';
@@ -133,22 +130,6 @@ export class TblSensorReadingsComponent implements OnInit {
       return [];
     } else {
       return [predicate + ',' + ascendingQueryParam];
-    }
-  }
-
-  search(query: any): any {
-    if (query) {
-      if (isNaN(query)) {
-        this.querySearch = {};
-        this.querySearch['employeeId.equals'] = query;
-      } else if (!isNaN(query)) {
-        this.querySearch = {};
-      }
-      this.tblSensorReadingsService.query(this.querySearch).subscribe(res => {
-        this.tblSensorReadings = res.body;
-      });
-    } else if (!query) {
-      this.load();
     }
   }
 }

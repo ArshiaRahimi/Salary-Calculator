@@ -1,0 +1,29 @@
+{
+  "projectApp": {
+    "tblEmployeeSalary": {
+      "home": {
+        "title": "Tbl Employee Salaries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tbl Employee Salary",
+        "createOrEditLabel": "Create or edit a Tbl Employee Salary",
+        "notFound": "No Tbl Employee Salaries found"
+      },
+      "created": "A new Tbl Employee Salary is created with identifier {{ param }}",
+      "updated": "A Tbl Employee Salary is updated with identifier {{ param }}",
+      "deleted": "A Tbl Employee Salary is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tbl Employee Salary {{ id }}?"
+      },
+      "detail": {
+        "title": "Tbl Employee Salary"
+      },
+      "id": "ID",
+      "dateCalculated": "Date Calculated",
+      "employeeId": "Employee Id",
+      "undertime": "Undertime",
+      "overtime": "Overtime",
+      "overtimeOffday": "Overtime Offday",
+      "totalSalary": "Total Salary"
+    }
+  }
+}

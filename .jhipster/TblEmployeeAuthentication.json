@@ -1,0 +1,31 @@
+{
+  "changelogDate": "20231030153653",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Integer",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "rfidId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fingerprint",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Integer",
+      "fieldValidateRules": []
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "TblEmployeeAuthentication",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="tblSalaryInfo">
+      <h2 data-cy="tblSalaryInfoDetailsHeading"><span jhiTranslate="projectApp.tblSalaryInfo.detail.title">Tbl Salary Info</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ tblSalaryInfo.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblSalaryInfo.employeeId">Employee Id</span></dt>
+        <dd>
+          <span>{{ tblSalaryInfo.employeeId }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblSalaryInfo.baseSalary">Base Salary</span></dt>
+        <dd>
+          <span>{{ tblSalaryInfo.baseSalary }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblSalaryInfo.housingRights">Housing Rights</span></dt>
+        <dd>
+          <span>{{ tblSalaryInfo.housingRights }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblSalaryInfo.internetRights">Internet Rights</span></dt>
+        <dd>
+          <span>{{ tblSalaryInfo.internetRights }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblSalaryInfo.groceriesRights">Groceries Rights</span></dt>
+        <dd>
+          <span>{{ tblSalaryInfo.groceriesRights }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/tbl-salary-info', tblSalaryInfo.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

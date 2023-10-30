@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="tblEmployeeSalary">
+      <h2 data-cy="tblEmployeeSalaryDetailsHeading">
+        <span jhiTranslate="projectApp.tblEmployeeSalary.detail.title">Tbl Employee Salary</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeSalary.dateCalculated">Date Calculated</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.dateCalculated | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeSalary.employeeId">Employee Id</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.employeeId }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeSalary.undertime">Undertime</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.undertime }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeSalary.overtime">Overtime</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.overtime }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeSalary.overtimeOffday">Overtime Offday</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.overtimeOffday }}</span>
+        </dd>
+        <dt><span jhiTranslate="projectApp.tblEmployeeSalary.totalSalary">Total Salary</span></dt>
+        <dd>
+          <span>{{ tblEmployeeSalary.totalSalary }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/tbl-employee-salary', tblEmployeeSalary.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
